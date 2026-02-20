@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <section className="py-10 sm:py-14 lg:py-20">
@@ -12,6 +14,14 @@ export default function Home() {
           I build thoughtful, production-grade web experiences with a focus on
           clean architecture, performance, and a calm, minimal aesthetic.
         </p>
+        <div>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground transition-colors hover:border-border/80 hover:bg-accent"
+          >
+            Hire me
+          </Link>
+        </div>
       </div>
     </section>
   );

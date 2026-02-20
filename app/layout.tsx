@@ -31,12 +31,12 @@ export default function RootLayout({
         <ThemeProvider>
           <div className="min-h-screen bg-background text-foreground">
             <header className="border-b border-border/60 bg-background/80 backdrop-blur">
-              <div className="mx-auto flex max-w-[1100px] items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-                <Link href="/" className="text-sm font-semibold tracking-tight">
+              <div className="mx-auto flex max-w-[1100px] items-center justify-between px-4 py-5 sm:px-6 sm:py-6 lg:px-8">
+                <Link href="/" className="text-base font-semibold tracking-tight">
                   <span className="text-muted">Koteswara</span>{" "}
                   <span className="text-foreground">Perumalla</span>
                 </Link>
-                <div className="flex items-center gap-6 text-sm text-muted">
+                <div className="flex items-center gap-6 text-base text-muted">
                   <Link
                     href="/"
                     className="transition-colors hover:text-foreground"
