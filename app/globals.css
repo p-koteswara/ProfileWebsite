@@ -1,19 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: theme(colors.zinc.50);
-  --foreground: theme(colors.zinc.900);
-  --muted: theme(colors.zinc.500);
-  --border: theme(colors.zinc.200);
-  --accent: theme(colors.zinc.100);
+  --background: #f0fdf4; /* Emerald 50 */
+  --foreground: #000000; /* Pure Black */
+  --muted: #4b5563; /* Gray 600 for light mode */
+  --border: #86efac; /* Emerald 300 */
+  --accent: #bbf7d0; /* Emerald 200 */
+  --header-bg: #064e3b; /* Dark Green Header */
+  --header-text: #ffffff; /* White text for header */
 }
 
 .dark {
-  --background: theme(colors.zinc.950);
-  --foreground: theme(colors.zinc.100);
-  --muted: theme(colors.zinc.400);
-  --border: theme(colors.zinc.800);
-  --accent: theme(colors.zinc.900);
+  --background: #000000; /* Black */
+  --foreground: #ffffff; /* Pure White */
+  --muted: #9ca3af; /* Gray 400 for dark mode */
+  --border: #064e3b; /* Emerald 900 */
+  --accent: #022c22; /* Emerald 950 */
+  --header-bg: #022c22; /* Very Dark Green Header */
+  --header-text: #ffffff; /* White text for header */
 }
 
 @theme inline {
@@ -22,10 +26,16 @@
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-accent: var(--accent);
+  --color-header-bg: var(--header-bg);
+  --color-header-text: var(--header-text);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+html {
+  @apply scroll-smooth;
+}
+
 body {
-  @apply bg-background text-foreground font-sans antialiased transition-colors duration-300 scroll-smooth;
+  @apply bg-background text-foreground font-sans antialiased transition-colors duration-300;
 }
