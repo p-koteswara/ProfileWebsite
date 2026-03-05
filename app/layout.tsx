@@ -9,6 +9,7 @@ import { ThemeProvider } from "../components/theme-provider";
 import CursorTrail from "../components/cursor-trail";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useEffect } from "react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -86,6 +87,43 @@ export default function RootLayout({
             <main className="relative z-10 mx-auto max-w-[1400px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
               {children}
             </main>
+
+            <footer className="relative z-10 border-t border-border/10 bg-background py-12">
+              <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
+                <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+                  <div className="text-sm text-muted">
+                    © {new Date().getFullYear()} Koteswara Perumalla. Built with Next.js.
+                  </div>
+                  <div className="flex items-center gap-6">
+                    <a
+                      href="https://github.com/p-koteswara"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted transition-colors hover:text-foreground"
+                      aria-label="GitHub"
+                    >
+                      <Github className="h-5 w-5" />
+                    </a>
+                    <a
+                      href="https://linkedin.com/in/perumallakoteswara"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted transition-colors hover:text-foreground"
+                      aria-label="LinkedIn"
+                    >
+                      <Linkedin className="h-5 w-5" />
+                    </a>
+                    <a
+                      href="mailto:perumallakoteswara@gmail.com"
+                      className="text-muted transition-colors hover:text-foreground"
+                      aria-label="Email"
+                    >
+                      <Mail className="h-5 w-5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </footer>
           </div>
         </ThemeProvider>
       </body>

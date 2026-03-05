@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink, Github, Download } from "lucide-react";
 import Magnetic from "@/components/magnetic";
 import TiltCard from "@/components/tilt-card";
 
@@ -147,6 +147,27 @@ export default function Home() {
                     >
                       Let&apos;s connect
                     </Link>
+                  </Magnetic>
+                  <Magnetic>
+                    <a
+                      href="https://github.com/p-koteswara"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-white/60 bg-transparent px-6 py-3 text-sm font-medium text-white transition-all hover:border-white hover:bg-white/10"
+                    >
+                      <Github className="h-4 w-4" />
+                      GitHub
+                    </a>
+                  </Magnetic>
+                  <Magnetic>
+                    <a
+                      href="/Koteswara - Resume.pdf"
+                      download
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500/20 border border-emerald-500/40 px-6 py-3 text-sm font-medium text-white transition-all hover:bg-emerald-500/30"
+                    >
+                      <Download className="h-4 w-4" />
+                      Resume
+                    </a>
                   </Magnetic>
                 </motion.div>
               </motion.div>
