@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, ExternalLink } from "lucide-react";
@@ -84,88 +85,109 @@ export default function Home() {
 
   return (
     <div className="space-y-20 sm:space-y-24 lg:space-y-28">
-      {/* Hero */}
-      <motion.section
-        id="hero"
-        className="pt-10 sm:pt-12 lg:pt-16"
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        <div className="hover-gradient-shift relative overflow-hidden rounded-3xl border border-border/70 bg-gradient-to-br from-emerald-950 via-emerald-950 to-emerald-900 px-6 py-10 text-white shadow-2xl dark:from-black dark:via-emerald-950 dark:to-emerald-950 sm:px-10 sm:py-12">
-          {/* Decorative background circle */}
-          <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-emerald-500/10 blur-3xl" />
-          
-          <div className="relative grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:items-center">
-            <motion.div className="space-y-6" variants={stagger} initial="initial" animate="whileInView">
-              <motion.p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/70" variants={fadeInUp}>
-                Full Stack Developer
-              </motion.p>
-              <motion.h1 className="text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl" variants={fadeInUp}>
-                Calm, reliable <span className="text-emerald-400">web experiences.</span>
-              </motion.h1>
-              <motion.p className="max-w-3xl text-sm leading-relaxed text-white/80 sm:text-base" variants={fadeInUp}>
-                I design and build focused, production-grade products—from polished UIs
-                to stable backend systems—so that teams can move quickly without the
-                noise.
-              </motion.p>
-              <motion.div className="flex flex-wrap gap-3" variants={fadeInUp}>
-                <Magnetic>
-                  <Link
-                    href="/projects"
-                    className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-emerald-950 transition-all hover:bg-white/90 hover:shadow-lg hover:shadow-emerald-500/20"
-                  >
-                    View my work
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </Link>
-                </Magnetic>
-                <Magnetic>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center justify-center rounded-full border border-white/60 bg-transparent px-6 py-3 text-sm font-medium text-white transition-all hover:border-white hover:bg-white/10"
-                  >
-                    Let&apos;s connect
-                  </Link>
-                </Magnetic>
-              </motion.div>
-            </motion.div>
-
-            <motion.div 
-              className="hover-gradient-shift space-y-4 rounded-2xl border border-white/20 bg-gradient-to-br from-black/20 via-black/20 to-emerald-500/10 p-5 text-sm text-white/90 shadow-sm backdrop-blur-md"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-            >
-              <div className="flex items-center justify-between">
-                <span className="text-xs uppercase tracking-[0.2em] text-white/50">
-                  Snapshot
-                </span>
-                <span className="flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs text-emerald-300">
-                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
-                  Available for work
-                </span>
-              </div>
-              <div className="space-y-3">
-                <p className="text-sm leading-relaxed">
-                  I work best on products where the details matter: thoughtful
-                  interactions, clear data, and infrastructure that doesn&apos;t fall
-                  over.
-                </p>
-                <div className="flex flex-wrap gap-2 text-xs">
-                  {["TypeScript", "React", "Next.js", "Node.js"].map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-white/90"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
+      <div className="mt-7 space-y-5 sm:mt-2">
+        {/* Hi Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="flex justify-center"
+        >
+          <div className="relative rounded-full p-2 border-2 border-dashed border-emerald-500 shadow-2xl dark:border-emerald-400">
+            <Image
+              src="/hi image.png"
+              alt="Hi"
+              width={500}
+              height={500}
+              className="rounded-full"
+              priority
+            />
           </div>
-        </div>
-      </motion.section>
+        </motion.div>
+
+        {/* Hero */}
+        <motion.section
+          id="hero"
+          className="pt-0 min-h-[60vh] flex flex-col"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <div className="hover-gradient-shift relative overflow-hidden rounded-3xl border border-border/70 bg-gradient-to-br from-emerald-950 via-emerald-950 to-emerald-900 px-6 py-10 text-white shadow-2xl dark:from-black dark:via-emerald-950 dark:to-emerald-950 sm:px-10 sm:py-12">
+            {/* Decorative background circle */}
+            <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-emerald-500/10 blur-3xl" />
+            
+            <div className="relative grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:items-center">
+              <motion.div className="space-y-6" variants={stagger} initial="initial" animate="whileInView">
+                <motion.p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/70" variants={fadeInUp}>
+                  Full Stack Developer
+                </motion.p>
+                <motion.h1 className="text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl" variants={fadeInUp}>
+                  Calm, reliable <span className="text-emerald-400">web experiences.</span>
+                </motion.h1>
+                <motion.p className="max-w-3xl text-sm leading-relaxed text-white/80 sm:text-base" variants={fadeInUp}>
+                  I design and build focused, production-grade products—from polished UIs
+                  to stable backend systems—so that teams can move quickly without the
+                  noise.
+                </motion.p>
+                <motion.div className="flex flex-wrap gap-3" variants={fadeInUp}>
+                  <Magnetic>
+                    <Link
+                      href="/projects"
+                      className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-emerald-950 transition-all hover:bg-white/90 hover:shadow-lg hover:shadow-emerald-500/20"
+                    >
+                      View my work
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                  </Magnetic>
+                  <Magnetic>
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center justify-center rounded-full border border-white/60 bg-transparent px-6 py-3 text-sm font-medium text-white transition-all hover:border-white hover:bg-white/10"
+                    >
+                      Let&apos;s connect
+                    </Link>
+                  </Magnetic>
+                </motion.div>
+              </motion.div>
+
+              <motion.div 
+                className="hover-gradient-shift space-y-4 rounded-2xl border border-white/20 bg-gradient-to-br from-black/20 via-black/20 to-emerald-500/10 p-5 text-sm text-white/90 shadow-sm backdrop-blur-md"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-xs uppercase tracking-[0.2em] text-white/50">
+                    Snapshot
+                  </span>
+                  <span className="flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs text-emerald-300">
+                    <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
+                    Available for work
+                  </span>
+                </div>
+                <div className="space-y-3">
+                  <p className="text-sm leading-relaxed">
+                    I work best on products where the details matter: thoughtful
+                    interactions, clear data, and infrastructure that doesn&apos;t fall
+                    over.
+                  </p>
+                  <div className="flex flex-wrap gap-2 text-xs">
+                    {["TypeScript", "React", "Next.js", "Node.js"].map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-white/90"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </motion.section>
+      </div>
 
       {/* Featured projects */}
       <motion.section id="work" className="space-y-8" {...fadeInUp}>
