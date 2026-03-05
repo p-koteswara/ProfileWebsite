@@ -62,7 +62,7 @@ const fadeInUp = {
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true },
   transition: { duration: 0.6, ease: "easeOut" },
-};
+} as const;
 
 const stagger = {
   initial: {},
@@ -72,7 +72,7 @@ const stagger = {
     },
   },
   viewport: { once: true },
-};
+} as const;
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState<Category>("All");
