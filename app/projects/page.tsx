@@ -59,22 +59,22 @@ export default function Projects() {
   ];
 
   return (
-    <section className="py-10 sm:py-14 lg:py-20 space-y-8">
-      <div className="space-y-6">
-        <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
+    <section className="py-6 sm:py-10 lg:py-20 space-y-6 sm:space-y-8">
+      <div className="space-y-4 sm:space-y-6">
+        <h1 className="text-2xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
           Projects
         </h1>
-        <p className="max-w-4xl text-base leading-relaxed text-muted sm:text-lg">
+        <p className="max-w-4xl text-xs leading-relaxed text-muted sm:text-base md:text-lg">
           A selection of work I&apos;ve built, focusing on clean code, thoughtful
           design, and reliable systems.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group cursor-pointer space-y-2"
+            className="group cursor-pointer space-y-2 sm:space-y-3"
           >
             <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-accent">
               <img
@@ -84,11 +84,11 @@ export default function Projects() {
               />
             </div>
             <div className="space-y-1 px-1">
-              <h3 className="line-clamp-2 text-sm font-medium leading-tight text-foreground group-hover:text-muted">
+              <h3 className="line-clamp-2 text-xs font-medium leading-tight text-foreground group-hover:text-muted sm:text-sm">
                 {project.title}
               </h3>
-              <p className="text-xs text-muted">{project.tech}</p>
-              <div className="flex items-center gap-2 text-xs text-muted">
+              <p className="text-[10px] text-muted sm:text-xs">{project.tech}</p>
+              <div className="flex items-center gap-2 text-[10px] text-muted sm:text-xs">
                 <span>{project.views} views</span>
                 <span>•</span>
                 <span>{project.date}</span>
