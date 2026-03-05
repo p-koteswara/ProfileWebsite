@@ -1,100 +1,116 @@
+"use client";
+
+import TiltCard from "@/components/tilt-card";
+import { motion } from "framer-motion";
+
 export default function Projects() {
   const projects = [
     {
-      title: "E-Commerce Platform with Next.js",
-      thumbnail: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=225&fit=crop",
-      views: "12.5K",
-      date: "2 months ago",
-      tech: "Next.js • TypeScript • Tailwind",
+      title: "Smart Medical Box",
+      description: "An IoT-based medicine dispenser prototype that uses Computer Vision for pill verification. Features scheduled dispensing logic and a Flask web interface for monitoring.",
+      category: "IoT & Computer Vision",
+      year: "2024",
+      tech: "Python • Raspberry Pi • OpenCV • Flask",
     },
     {
-      title: "Real-Time Chat Application",
-      thumbnail: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=225&fit=crop",
-      views: "8.3K",
-      date: "4 months ago",
-      tech: "React • Socket.io • Node.js",
+      title: "Customer Segmentation Engine",
+      description: "A data analysis tool utilizing RFM analysis and K-Means clustering algorithms to segment customers and improve targeting accuracy.",
+      category: "Data Science",
+      year: "2024",
+      tech: "Python • Scikit-learn • Pandas • Matplotlib",
     },
     {
-      title: "Task Management Dashboard",
-      thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=225&fit=crop",
-      views: "15.2K",
-      date: "1 month ago",
-      tech: "Vue.js • PostgreSQL • Express",
+      title: "AI Interview Assistant",
+      description: "A prototype system that analyzes interview responses using voice and text input. Implements sentiment analysis to generate automated feedback reports.",
+      category: "AI & NLP",
+      year: "2024",
+      tech: "Python • Google Speech API • NLP • Tkinter",
     },
     {
-      title: "Weather Forecast API Service",
-      thumbnail: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=225&fit=crop",
-      views: "6.7K",
-      date: "5 months ago",
-      tech: "Python • FastAPI • Redis",
+      title: "Trynocode Landing Page",
+      description: "Designed and developed a complete landing page for Trynocode using Next.js. Focused on responsive layout, modern component structure, and navigation.",
+      category: "Web Development",
+      year: "2025",
+      tech: "Next.js • React • Tailwind • Figma",
     },
     {
-      title: "Mobile Banking App UI",
-      thumbnail: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=225&fit=crop",
-      views: "22.1K",
-      date: "3 weeks ago",
-      tech: "React Native • TypeScript",
+      title: "Mabani & K2K Applications",
+      description: "Worked on client-facing applications, converting Figma UI/UX designs into functional FlutterFlow screens and integrating REST APIs for data handling.",
+      category: "Mobile Development",
+      year: "2025",
+      tech: "FlutterFlow • REST APIs • Figma • Firebase",
     },
     {
-      title: "Analytics Dashboard with Charts",
-      thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=225&fit=crop",
-      views: "9.8K",
-      date: "2 months ago",
-      tech: "Next.js • D3.js • MongoDB",
-    },
-    {
-      title: "Social Media Clone",
-      thumbnail: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=400&h=225&fit=crop",
-      views: "18.4K",
-      date: "1 week ago",
-      tech: "React • GraphQL • Apollo",
-    },
-    {
-      title: "File Storage System",
-      thumbnail: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=225&fit=crop",
-      views: "5.2K",
-      date: "6 months ago",
-      tech: "Node.js • AWS S3 • Express",
+      title: "Lead Generation Database",
+      description: "Built a comprehensive database of 250+ potential clients to support business outreach. Combined with SEO-optimized technical writing to improve visibility.",
+      category: "Data Management",
+      year: "2024",
+      tech: "SEO • Database • Data Analysis • Marketing",
     },
   ];
 
   return (
-    <section className="py-6 sm:py-10 lg:py-20 space-y-6 sm:space-y-8">
-      <div className="space-y-4 sm:space-y-6">
-        <h1 className="text-2xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
-          Projects
+    <section className="py-6 sm:py-14 lg:py-20 space-y-8 sm:space-y-12">
+      <motion.div 
+        className="space-y-4 sm:space-y-6"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h1 className="text-3xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
+          Selected <span className="text-emerald-500">work.</span>
         </h1>
-        <p className="max-w-4xl text-xs leading-relaxed text-muted sm:text-base md:text-lg">
-          A selection of work I&apos;ve built, focusing on clean code, thoughtful
-          design, and reliable systems.
+        <p className="max-w-4xl text-sm leading-relaxed text-muted sm:text-lg">
+          From IoT prototypes to full-stack web applications, I enjoy building 
+          systems that solve real problems. Here are some of the projects I&apos;ve 
+          worked on during my academic and professional journey.
         </p>
-      </div>
+      </motion.div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {projects.map((project, index) => (
-          <div
+          <motion.div
             key={index}
-            className="group cursor-pointer space-y-2 sm:space-y-3"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1, duration: 0.5 }}
+            viewport={{ once: true }}
+            className="h-full"
           >
-            <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-accent">
-              <img
-                src={project.thumbnail}
-                alt={project.title}
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </div>
-            <div className="space-y-1 px-1">
-              <h3 className="line-clamp-2 text-xs font-medium leading-tight text-foreground group-hover:text-muted sm:text-sm">
-                {project.title}
-              </h3>
-              <p className="text-[10px] text-muted sm:text-xs">{project.tech}</p>
-              <div className="flex items-center gap-2 text-[10px] text-muted sm:text-xs">
-                <span>{project.views} views</span>
-                <span>•</span>
-                <span>{project.date}</span>
+            <TiltCard className="h-full">
+              <div className="group flex h-full flex-col justify-between rounded-2xl border border-border/50 bg-card/50 p-6 transition-all hover:border-emerald-500/30 hover:shadow-xl hover:shadow-emerald-500/5 hover:bg-card">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-medium text-emerald-500 uppercase tracking-wider">
+                      {project.category}
+                    </span>
+                    <span className="rounded-full border border-border/50 bg-accent/50 px-2 py-0.5 text-[10px] text-muted">
+                      {project.year}
+                    </span>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-semibold leading-tight text-foreground group-hover:text-emerald-500 transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-sm text-muted leading-relaxed">
+                      {project.description}
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="pt-6 mt-2 border-t border-border/50">
+                  <div className="flex flex-wrap gap-2 text-xs text-muted/80">
+                    {project.tech.split("•").map((tech) => (
+                      <span key={tech} className="bg-accent/50 px-2 py-1 rounded-md border border-border/50">
+                        {tech.trim()}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            </TiltCard>
+          </motion.div>
         ))}
       </div>
     </section>

@@ -248,7 +248,7 @@ export default function Home() {
           viewport={{ once: true }}
         >
           {filteredProjects.map((project) => (
-            <TiltCard key={project.title}>
+            <TiltCard key={project.title} className="h-full">
               <motion.div
                 variants={fadeInUp}
                 className="hover-gradient-shift group flex h-full flex-col justify-between rounded-2xl border border-border/70 bg-gradient-to-br from-background/60 via-background/60 to-emerald-500/5 p-4 sm:p-5 shadow-sm transition-all hover:border-emerald-500/30 hover:shadow-xl hover:shadow-emerald-500/5 backdrop-blur-sm"

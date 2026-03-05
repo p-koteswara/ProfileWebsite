@@ -45,8 +45,8 @@ export default function RootLayout({
   }, [mouseX, mouseY]);
 
   const navItems = [
-    { name: "Home", href: "/#hero" },
-    { name: "About", href: "/#about" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
     { name: "Projects", href: "/projects" },
     { name: "Contact", href: "/contact" },
   ];
@@ -69,7 +69,7 @@ export default function RootLayout({
 
             <header className="sticky top-0 z-50 border-b border-border/10 bg-header-bg/95 text-header-text shadow-md backdrop-blur-sm">
               <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
-                <Link href="/#hero" className="group text-base font-semibold tracking-tight shrink-0">
+                <Link href="/" className="group text-base font-semibold tracking-tight shrink-0">
                   <span className="opacity-80 transition-opacity group-hover:opacity-100">Koteswara</span>{" "}
                   <span className="transition-transform group-hover:translate-x-1 inline-block">Perumalla</span>
                 </Link>
