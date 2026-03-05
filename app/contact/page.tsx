@@ -7,7 +7,7 @@ export default function Contact() {
         <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
           Contact
         </h1>
-        <p className="max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
+        <p className="max-w-4xl text-base leading-relaxed text-muted sm:text-lg">
           Let&apos;s connect. I&apos;m open to discussing new projects, opportunities,
           or just having a conversation about technology and design.
         </p>

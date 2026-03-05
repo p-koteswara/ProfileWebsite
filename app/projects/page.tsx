@@ -64,7 +64,7 @@ export default function Projects() {
         <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
           Projects
         </h1>
-        <p className="max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
+        <p className="max-w-4xl text-base leading-relaxed text-muted sm:text-lg">
           A selection of work I&apos;ve built, focusing on clean code, thoughtful
           design, and reliable systems.
         </p>

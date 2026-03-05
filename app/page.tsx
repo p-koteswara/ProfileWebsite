@@ -92,7 +92,7 @@ export default function Home() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="relative overflow-hidden rounded-3xl border border-border/70 bg-gradient-to-br from-emerald-950 via-emerald-950 to-emerald-900 px-6 py-10 text-white shadow-2xl dark:from-black dark:via-emerald-950 dark:to-emerald-950 sm:px-10 sm:py-12">
+        <div className="hover-gradient-shift relative overflow-hidden rounded-3xl border border-border/70 bg-gradient-to-br from-emerald-950 via-emerald-950 to-emerald-900 px-6 py-10 text-white shadow-2xl dark:from-black dark:via-emerald-950 dark:to-emerald-950 sm:px-10 sm:py-12">
           {/* Decorative background circle */}
           <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-emerald-500/10 blur-3xl" />
           
@@ -104,7 +104,7 @@ export default function Home() {
               <motion.h1 className="text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl" variants={fadeInUp}>
                 Calm, reliable <span className="text-emerald-400">web experiences.</span>
               </motion.h1>
-              <motion.p className="max-w-xl text-sm leading-relaxed text-white/80 sm:text-base" variants={fadeInUp}>
+              <motion.p className="max-w-3xl text-sm leading-relaxed text-white/80 sm:text-base" variants={fadeInUp}>
                 I design and build focused, production-grade products—from polished UIs
                 to stable backend systems—so that teams can move quickly without the
                 noise.
@@ -131,7 +131,7 @@ export default function Home() {
             </motion.div>
 
             <motion.div 
-              className="space-y-4 rounded-2xl border border-white/20 bg-black/20 p-5 text-sm text-white/90 shadow-sm backdrop-blur-md"
+              className="hover-gradient-shift space-y-4 rounded-2xl border border-white/20 bg-gradient-to-br from-black/20 via-black/20 to-emerald-500/10 p-5 text-sm text-white/90 shadow-sm backdrop-blur-md"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
@@ -174,7 +174,7 @@ export default function Home() {
             <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
               Featured projects
             </h2>
-            <p className="max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
+            <p className="max-w-4xl text-sm leading-relaxed text-muted sm:text-base">
               A few recent pieces of work that highlight how I think about structure,
               UX, and long-term maintainability.
             </p>
@@ -208,7 +208,7 @@ export default function Home() {
             <TiltCard key={project.title}>
               <motion.div
                 variants={fadeInUp}
-                className="group flex h-full flex-col justify-between rounded-2xl border border-border/70 bg-background/60 p-5 shadow-sm transition-all hover:border-emerald-500/30 hover:shadow-xl hover:shadow-emerald-500/5 backdrop-blur-sm"
+                className="hover-gradient-shift group flex h-full flex-col justify-between rounded-2xl border border-border/70 bg-gradient-to-br from-background/60 via-background/60 to-emerald-500/5 p-5 shadow-sm transition-all hover:border-emerald-500/30 hover:shadow-xl hover:shadow-emerald-500/5 backdrop-blur-sm"
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
@@ -257,7 +257,7 @@ export default function Home() {
           <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
             About
           </h2>
-          <p className="max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
+          <p className="max-w-4xl text-sm leading-relaxed text-muted sm:text-base">
             I&apos;m a full stack developer who enjoys designing simple, resilient
             systems. I care about clear abstractions, small details, and building
             interfaces that feel calm and predictable rather than loud or overdesigned.
@@ -297,7 +297,7 @@ export default function Home() {
         </div>
 
         <motion.div 
-          className="space-y-4 rounded-2xl border border-border bg-background/60 p-5 shadow-sm hover:shadow-lg transition-shadow backdrop-blur-sm"
+          className="hover-gradient-shift space-y-4 rounded-2xl border border-border bg-gradient-to-br from-background/60 via-background/60 to-emerald-500/5 p-5 shadow-sm hover:shadow-lg transition-all backdrop-blur-sm"
           whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 300 }}
         >

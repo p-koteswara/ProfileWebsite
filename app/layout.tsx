@@ -6,6 +6,7 @@ import Link from "next/link";
 import "./globals.css";
 import { ThemeToggle } from "../components/theme-toggle";
 import { ThemeProvider } from "../components/theme-provider";
+import CursorTrail from "../components/cursor-trail";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useEffect } from "react";
 
@@ -46,6 +47,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ThemeProvider>
           <div className="relative min-h-screen bg-background text-foreground transition-colors duration-300">
+            <CursorTrail />
             {/* Mouse Spotlight */}
             <motion.div
               className="pointer-events-none fixed inset-0 z-30 opacity-40 dark:opacity-20"
@@ -55,7 +57,7 @@ export default function RootLayout({
             />
 
             <header className="sticky top-0 z-50 border-b border-border/10 bg-header-bg/95 text-header-text shadow-md backdrop-blur-sm">
-              <div className="mx-auto flex max-w-[1100px] items-center justify-between px-4 py-5 sm:px-6 sm:py-6 lg:px-8">
+              <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-5 sm:px-6 sm:py-6 lg:px-8">
                 <Link href="/#hero" className="group text-base font-semibold tracking-tight">
                   <span className="opacity-80 transition-opacity group-hover:opacity-100">Koteswara</span>{" "}
                   <span className="transition-transform group-hover:translate-x-1 inline-block">Perumalla</span>
@@ -81,7 +83,7 @@ export default function RootLayout({
               </div>
             </header>
 
-            <main className="relative z-10 mx-auto max-w-[1100px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+            <main className="relative z-10 mx-auto max-w-[1400px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
               {children}
             </main>
           </div>
