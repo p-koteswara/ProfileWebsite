@@ -11,50 +11,51 @@ import TiltCard from "@/components/tilt-card";
 type Category = "All" | "Web" | "Backend" | "UI";
 
 const FEATURED_PROJECTS = [
-  // ... (keeping same projects)
   {
-    title: "Commerce Studio",
-    description: "Modular storefront and dashboard built with Next.js and a headless backend.",
-    tech: ["Next.js", "TypeScript", "Tailwind"],
-    category: "Web" as Category,
+    title: "Smart Medical Box",
+    description: "Designed a smart medicine dispenser prototype using Raspberry Pi and Servo Motors with a Flask web interface.",
+    tech: ["Python", "Flask", "Raspberry Pi", "OpenCV"],
+    category: "Backend" as Category,
   },
   {
-    title: "Realtime Collab Board",
-    description: "Low-latency collaborative whiteboard with presence indicators and comments.",
-    tech: ["React", "WebSockets", "Node.js"],
-    category: "Web" as Category,
+    title: "Customer Segmentation",
+    description: "Performed customer segmentation using RFM analysis and K-Means clustering algorithms to improve targeting accuracy.",
+    tech: ["Python", "Scikit-learn", "NumPy", "Pandas"],
+    category: "Backend" as Category,
   },
   {
-    title: "Analytics Console",
-    description: "Executive dashboard for product metrics with custom charting and alerts.",
-    tech: ["React", "PostgreSQL", "D3.js"],
+    title: "AI Interview Assistant",
+    description: "Developed a prototype system to analyze interview responses using text and voice input with sentiment analysis.",
+    tech: ["Python", "Google Speech API", "Sentiment Analysis"],
     category: "Backend" as Category,
   },
 ];
 
 const SKILLS = [
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "PostgreSQL",
-  "Tailwind CSS",
-  "REST / GraphQL",
-  "Testing",
+  "Python",
+  "React JS",
+  "Next JS",
+  "FastAPI",
+  "Flask",
+  "MySQL",
+  "Firebase",
+  "Rest APIs",
+  "Postman",
+  "Figma",
 ];
 
 const EXPERIENCE = [
   {
-    period: "2023 — Present",
-    title: "Full Stack Developer",
-    company: "Independent",
-    summary: "Building calm, production-grade web products for startups and small teams.",
+    period: "Jul 2025 — Jan 2026",
+    title: "Software Developer",
+    company: "Trynocode",
+    summary: "Worked on client-facing apps (Mabani, K2K). Converted Figma designs to functional React/Next.js screens and integrated REST APIs.",
   },
   {
-    period: "2021 — 2023",
-    title: "Software Engineer",
-    company: "Product Teams",
-    summary: "Worked across the stack on dashboards, APIs, and internal tools.",
+    period: "Jun 2024 — Aug 2024",
+    title: "Summer Intern",
+    company: "Whizkey",
+    summary: "Built lead-generation databases and wrote SEO-optimized technical articles. Participated in company-wide hackathons.",
   },
 ];
 
@@ -120,15 +121,15 @@ export default function Home() {
             <div className="relative grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:items-center">
               <motion.div className="space-y-6" variants={stagger} initial="initial" animate="whileInView">
                 <motion.p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/70" variants={fadeInUp}>
-                  Full Stack Developer
+                  Computer Science Student @ BITS Pilani
                 </motion.p>
                 <motion.h1 className="text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl" variants={fadeInUp}>
-                  Calm, reliable <span className="text-emerald-400">web experiences.</span>
+                  Reliable <span className="text-emerald-400">web & backend systems.</span>
                 </motion.h1>
                 <motion.p className="max-w-3xl text-sm leading-relaxed text-white/80 sm:text-base" variants={fadeInUp}>
-                  I design and build focused, production-grade products—from polished UIs
-                  to stable backend systems—so that teams can move quickly without the
-                  noise.
+                  I&apos;m Koteswara Rao Perumalla. I build production-grade products—from 
+                  responsive React/Next.js interfaces to robust Python backends—focusing 
+                  on performance and simple abstractions.
                 </motion.p>
                 <motion.div className="flex flex-wrap gap-3" variants={fadeInUp}>
                   <Magnetic>
@@ -189,12 +190,12 @@ export default function Home() {
                 </div>
                 <div className="space-y-3">
                   <p className="text-sm leading-relaxed">
-                    I work best on products where the details matter: thoughtful
-                    interactions, clear data, and infrastructure that doesn&apos;t fall
-                    over.
+                    I work best at the intersection of performance and design, 
+                    building stable systems that solve real problems with 
+                    minimal noise.
                   </p>
                   <div className="flex flex-wrap gap-2 text-xs">
-                    {["TypeScript", "React", "Next.js", "Node.js"].map((item) => (
+                    {["Python", "React", "FastAPI", "Next.js"].map((item) => (
                       <span
                         key={item}
                         className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-white/90"
@@ -218,8 +219,8 @@ export default function Home() {
               Featured projects
             </h2>
             <p className="max-w-4xl text-sm leading-relaxed text-muted sm:text-base">
-              A few recent pieces of work that highlight how I think about structure,
-              UX, and long-term maintainability.
+              A few technical projects that highlight how I think about system design, 
+              performance, and user experience.
             </p>
           </div>
           <div className="flex flex-wrap gap-2 text-xs">
@@ -301,9 +302,11 @@ export default function Home() {
             About
           </h2>
           <p className="max-w-4xl text-sm leading-relaxed text-muted sm:text-base">
-            I&apos;m a full stack developer who enjoys designing simple, resilient
-            systems. I care about clear abstractions, small details, and building
-            interfaces that feel calm and predictable rather than loud or overdesigned.
+            I&apos;m a Computer Science student at BITS Pilani Dubai with a 
+            passion for building resilient systems and thoughtful interfaces. 
+            I have experience in full-stack development, from React/Next.js 
+            frontends to Python/FastAPI backends, and I enjoy solving complex 
+            problems with clean code.
           </p>
 
           <div className="mt-6 space-y-4 text-sm">
