@@ -1,23 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f0fdf4; /* Emerald 50 */
-  --foreground: #000000; /* Pure Black */
-  --muted: #4b5563; /* Gray 600 for light mode */
-  --border: #86efac; /* Emerald 300 */
-  --accent: #bbf7d0; /* Emerald 200 */
-  --header-bg: #064e3b; /* Dark Green Header */
-  --header-text: #ffffff; /* White text for header */
+  --background: #f0fdf4;
+  --foreground: #000000;
+  --muted: #4b5563;
+  --border: #064e3b;
+  --border-strong: #022c22;
+  --accent: #bbf7d0;
+  --header-bg: #064e3b;
+  --header-text: #ffffff;
 }
 
 .dark {
-  --background: #000000; /* Black */
-  --foreground: #ffffff; /* Pure White */
-  --muted: #9ca3af; /* Gray 400 for dark mode */
-  --border: #064e3b; /* Emerald 900 */
-  --accent: #022c22; /* Emerald 950 */
-  --header-bg: #022c22; /* Very Dark Green Header */
-  --header-text: #ffffff; /* White text for header */
+  --background: #000000;
+  --foreground: #ffffff;
+  --muted: #9ca3af;
+  --border: #166534;
+  --border-strong: #14532d;
+  --accent: #022c22;
+  --header-bg: #022c22;
+  --header-text: #ffffff;
 }
 
 @theme inline {
@@ -25,6 +27,7 @@
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
   --color-accent: var(--accent);
   --color-header-bg: var(--header-bg);
   --color-header-text: var(--header-text);
@@ -37,29 +40,46 @@ html {
 }
 
 body {
-  @apply bg-background text-foreground font-sans antialiased transition-colors duration-300;
+  @apply bg-background text-foreground font-sans antialiased;
 }
 
-@keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+.card-surface {
+  @apply rounded-lg border-2 border-border bg-background;
 }
 
-.hover-gradient-shift {
-  background-size: 200% 200%;
-  transition: background-position 0.8s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+.section-divider {
+  @apply border-b-2 border-border pb-2;
 }
 
-.hover-gradient-shift:hover {
-  background-position: 100% 100%;
+.tag-border {
+  @apply rounded-md border-2 border-border bg-accent/70;
 }
 
-.border-dashed-sparse {
-  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3cellipse cx='50%25' cy='50%25' rx='48%25' ry='48%25' fill='none' stroke='%2322c55e' stroke-width='6' stroke-dasharray='40%2c 60' stroke-linecap='round'/%3e%3c/svg%3e");
-  background-size: cover;
+/* Equal-height grids: stretch every card in a row to the tallest sibling */
+.card-grid {
+  @apply grid items-stretch gap-4 sm:gap-5;
 }
 
-.dark .border-dashed-sparse {
-  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3cellipse cx='50%25' cy='50%25' rx='48%25' ry='48%25' fill='none' stroke='%234ade80' stroke-width='6' stroke-dasharray='40%2c 60' stroke-linecap='round'/%3e%3c/svg%3e");
+.uniform-card {
+  @apply flex h-full flex-col rounded-lg border-2 border-border bg-background p-5 sm:p-6;
+}
+
+.uniform-card-body {
+  @apply flex min-h-0 flex-1 flex-col gap-3;
+}
+
+.uniform-card-desc {
+  @apply line-clamp-5 flex-1 text-xs leading-relaxed text-muted sm:text-sm;
+}
+
+.uniform-card-footer {
+  @apply mt-auto flex flex-wrap gap-1.5 border-t-2 border-border pt-4 text-[10px] sm:gap-2 sm:text-xs;
+}
+
+.section-split {
+  @apply grid gap-8 md:items-stretch;
+}
+
+.contact-card {
+  @apply flex h-full min-h-[7.5rem] flex-col justify-center rounded-lg border-2 border-border bg-background p-5 sm:p-6;
 }
