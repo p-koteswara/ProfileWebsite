@@ -73,6 +73,13 @@ const EXPERIENCE = [
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState<Category>("All");
+  const [message, setMessage] = useState("");
+
+  const handleSendMessage = () => {
+    if (!message.trim()) return;
+    window.location.href = `mailto:perumallakoteswara@gmail.com?body=${encodeURIComponent(message)}`;
+    setMessage("");
+  };
 
   const filteredProjects =
     activeCategory === "All"
@@ -112,7 +119,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 gap-2 xs:grid-cols-2 sm:flex sm:flex-wrap sm:gap-3">
                   <Link
                     href="/projects"
-                    className="flex w-full items-center justify-center gap-2 rounded-md border border-white bg-white px-4 py-3 text-xs font-medium text-emerald-950 transition-colors hover:bg-white/90 sm:w-auto sm:px-6 sm:py-3 sm:text-sm"
+                    className="flex w-full items-center justify-center gap-2 rounded-md border border-emerald-100 bg-emerald-50 px-4 py-3 text-xs font-medium text-emerald-950 transition-colors hover:bg-white sm:w-auto sm:px-6 sm:py-3 sm:text-sm"
                   >
                     View my work
                     <ArrowRight className="h-4 w-4" />
@@ -140,6 +147,26 @@ export default function Home() {
                     <Download className="h-4 w-4" />
                     Resume
                   </a>
+
+                  {/* Direct Message Input */}
+                  <div className="flex w-full items-center gap-2 rounded-md bg-white/5 border border-white/10 px-4 py-2 transition-all focus-within:border-emerald-500/50 focus-within:bg-white/10 sm:w-auto sm:min-w-[260px]">
+                    <input
+                      type="text"
+                      placeholder="Msg me directly..."
+                      className="w-full bg-transparent text-xs outline-none text-white placeholder:text-white/40 sm:text-sm"
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      onKeyDown={(e) => e.key === "Enter" && handleSendMessage()}
+                    />
+                    <button
+                      onClick={handleSendMessage}
+                      className="group/send flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500 text-emerald-950 transition-all hover:bg-emerald-400 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
+                      title="Send message to perumallakoteswara@gmail.com"
+                      disabled={!message.trim()}
+                    >
+                      <Send className="h-3.5 w-3.5 transition-transform group-hover/send:translate-x-0.5 group-hover/send:-translate-y-0.5" />
+                    </button>
+                  </div>
                 </div>
               </div>
 
