@@ -76,7 +76,7 @@ export default function Projects() {
     <section className="space-y-8 py-6 sm:space-y-12 sm:py-14 lg:py-20">
       <div className="card-surface space-y-4 p-6 sm:space-y-6 sm:p-8">
         <h1 className="text-3xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
-          Selected <span className="text-emerald-500">work.</span>
+          Selected <span className="text-emerald-700 dark:text-emerald-500">work.</span>
         </h1>
         <p className="max-w-4xl text-sm leading-relaxed text-muted sm:text-lg">
           From IoT prototypes to full-stack web applications, I enjoy building
@@ -90,7 +90,7 @@ export default function Projects() {
           <article key={project.title} className="uniform-card">
             <div className="uniform-card-body">
               <div className="flex w-full items-center justify-between gap-2">
-                <span className="text-xs font-medium uppercase tracking-wider text-emerald-500">
+                <span className="text-xs font-medium uppercase tracking-wider text-emerald-700 dark:text-emerald-500">
                   {project.category}
                 </span>
                 <span className="tag-border px-2 py-0.5 text-[10px] text-muted">

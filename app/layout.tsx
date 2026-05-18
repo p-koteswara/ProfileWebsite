@@ -97,7 +97,7 @@ export default function RootLayout({
                     href="https://github.com/p-koteswara"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted transition-colors hover:text-foreground"
+                    className="text-foreground/70 transition-colors hover:text-foreground dark:text-muted"
                     aria-label="GitHub"
                   >
                     <Github className="h-5 w-5" />
@@ -106,14 +106,14 @@ export default function RootLayout({
                     href="https://linkedin.com/in/perumallakoteswara"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted transition-colors hover:text-foreground"
+                    className="text-foreground/70 transition-colors hover:text-foreground dark:text-muted"
                     aria-label="LinkedIn"
                   >
                     <Linkedin className="h-5 w-5" />
                   </a>
                   <a
                     href="mailto:perumallakoteswara@gmail.com"
-                    className="text-muted transition-colors hover:text-foreground"
+                    className="text-foreground/70 transition-colors hover:text-foreground dark:text-muted"
                     aria-label="Email"
                   >
                     <Mail className="h-5 w-5" />

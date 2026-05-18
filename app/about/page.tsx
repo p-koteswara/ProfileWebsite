@@ -90,7 +90,7 @@ export default function About() {
     <div className="space-y-16 pb-20">
       <section className="card-surface space-y-6 p-6 pt-6 sm:p-8 sm:pt-14">
         <h1 className="text-3xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
-          Building with <span className="text-emerald-500">purpose.</span>
+          Building with <span className="text-emerald-700 dark:text-emerald-500">purpose.</span>
         </h1>
         <div className="max-w-3xl space-y-4">
           <p className="text-sm leading-relaxed text-muted sm:text-lg">
@@ -110,7 +110,7 @@ export default function About() {
 
       <section className="space-y-8">
         <div className="section-divider flex items-center gap-2">
-          <Briefcase className="h-5 w-5 text-emerald-500" />
+          <Briefcase className="h-5 w-5 text-emerald-700 dark:text-emerald-500" />
           <h2 className="text-xl font-semibold tracking-tight sm:text-2xl">
             Experience
           </h2>
@@ -125,7 +125,7 @@ export default function About() {
                       {exp.role}
                     </h3>
                     <span className="text-xs text-muted">@</span>
-                    <span className="text-lg font-medium text-emerald-500">
+                    <span className="text-lg font-medium text-emerald-700 dark:text-emerald-500">
                       {exp.company}
                     </span>
                   </div>
@@ -154,7 +154,7 @@ export default function About() {
 
       <section className="space-y-8">
         <div className="section-divider flex items-center gap-2">
-          <Sparkles className="h-5 w-5 text-emerald-500" />
+          <Sparkles className="h-5 w-5 text-emerald-700 dark:text-emerald-500" />
           <h2 className="text-xl font-semibold tracking-tight sm:text-2xl">
             Technical Toolkit
           </h2>
@@ -162,7 +162,7 @@ export default function About() {
         <div className="card-grid sm:grid-cols-2 lg:grid-cols-4">
           {skillCategories.map((category) => (
             <div key={category.name} className="uniform-card">
-              <div className="flex items-center gap-2 text-emerald-500">
+              <div className="flex items-center gap-2 text-emerald-700 dark:text-emerald-500">
                 {category.icon}
                 <h3 className="text-sm font-semibold uppercase tracking-wider">
                   {category.name}
@@ -185,7 +185,7 @@ export default function About() {
       <div className="section-split lg:grid-cols-2 lg:gap-16">
         <section className="flex flex-col space-y-8">
           <div className="section-divider flex items-center gap-2">
-            <GraduationCap className="h-5 w-5 text-emerald-500" />
+            <GraduationCap className="h-5 w-5 text-emerald-700 dark:text-emerald-500" />
             <h2 className="text-xl font-semibold tracking-tight sm:text-2xl">
               Education
             </h2>
@@ -197,7 +197,7 @@ export default function About() {
                   <h3 className="font-medium text-foreground">{edu.school}</h3>
                   <span className="shrink-0 text-xs text-muted">{edu.period}</span>
                 </div>
-                <p className="text-sm text-emerald-500">{edu.degree}</p>
+                <p className="text-sm text-emerald-700 dark:text-emerald-500">{edu.degree}</p>
                 {edu.details && (
                   <p className="text-sm text-muted">{edu.details}</p>
                 )}
@@ -209,7 +209,7 @@ export default function About() {
 
         <section className="flex h-full flex-col space-y-8">
           <div className="section-divider flex items-center gap-2">
-            <Layout className="h-5 w-5 text-emerald-500" />
+            <Layout className="h-5 w-5 text-emerald-700 dark:text-emerald-500" />
             <h2 className="text-xl font-semibold tracking-tight sm:text-2xl">
               Beyond Code
             </h2>
@@ -221,8 +221,8 @@ export default function About() {
               participating in hackathons and exploring the intersection of AI
               and human productivity.
             </p>
-            <div className="uniform-card mt-auto flex-1 bg-emerald-500/5">
-              <h4 className="mb-2 text-sm font-medium text-emerald-500">
+            <div className="uniform-card mt-auto flex-1 bg-emerald-100 dark:bg-emerald-500/5">
+              <h4 className="mb-2 text-sm font-medium text-emerald-800 dark:text-emerald-500">
                 Soft Skills
               </h4>
               <div className="flex flex-wrap gap-3 text-xs text-muted">

@@ -102,7 +102,7 @@ export default function Home() {
                   Computer Science Student @ BITS Pilani
                 </p>
                 <h1 className="text-3xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
-                  Reliable <span className="text-emerald-400">web & backend systems.</span>
+                  Reliable <span className="text-emerald-300">web & backend systems.</span>
                 </h1>
                 <p className="max-w-3xl text-xs leading-relaxed text-white/80 sm:text-sm md:text-base">
                   I&apos;m Koteswara Rao Perumalla. I build production-grade products—from
@@ -143,18 +143,18 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="card-surface flex h-full flex-col justify-between gap-4 border-emerald-700 bg-black/20 p-4 text-xs text-white/90 sm:p-5 sm:text-sm">
+              <div className="hero-snapshot">
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 sm:text-xs">
+                  <span className="hero-snapshot-muted text-[10px] uppercase tracking-[0.2em] sm:text-xs">
                     Snapshot
                   </span>
-                  <span className="flex items-center gap-2 rounded-md border-2 border-emerald-600 bg-emerald-500/10 px-2 py-0.5 text-[10px] text-emerald-300 sm:px-3 sm:py-1 sm:text-xs">
-                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                  <span className="flex items-center gap-2 rounded-md border-2 border-emerald-400/70 bg-emerald-800/50 px-2 py-0.5 text-[10px] text-emerald-100 sm:px-3 sm:py-1 sm:text-xs">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
                     Available for work
                   </span>
                 </div>
                 <div className="space-y-3">
-                  <p className="leading-relaxed">
+                  <p className="leading-relaxed text-emerald-50">
                     I work best at the intersection of performance and design,
                     building stable systems that solve real problems with
                     minimal noise.
@@ -163,7 +163,7 @@ export default function Home() {
                     {["Python", "React", "FastAPI", "Next.js"].map((item) => (
                       <span
                         key={item}
-                        className="rounded-md border-2 border-emerald-700 bg-white/5 px-2 py-0.5 text-white/90 sm:px-3 sm:py-1"
+                        className="hero-snapshot-tag"
                       >
                         {item}
                       </span>
@@ -196,7 +196,7 @@ export default function Home() {
                 className={`rounded-md border-2 px-2.5 py-1 sm:px-3 ${
                   activeCategory === category
                     ? "border-emerald-900 bg-emerald-100 text-emerald-950 dark:border-emerald-600 dark:bg-emerald-950 dark:text-emerald-100"
-                    : "border-emerald-800 bg-background text-muted hover:border-emerald-900 hover:text-foreground dark:border-emerald-700"
+                    : "border-emerald-800 bg-card text-foreground/70 hover:border-emerald-900 hover:text-foreground dark:border-emerald-700 dark:bg-background dark:text-muted"
                 }`}
               >
                 {category}

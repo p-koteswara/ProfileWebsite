@@ -1,18 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f0fdf4;
-  --foreground: #000000;
-  --muted: #4b5563;
+  --background: #ecfdf5;
+  --card: #f0fdf4;
+  --foreground: #022c22;
+  --muted: #374151;
   --border: #064e3b;
   --border-strong: #022c22;
-  --accent: #bbf7d0;
+  --accent: #a7f3d0;
   --header-bg: #064e3b;
   --header-text: #ffffff;
 }
 
 .dark {
   --background: #000000;
+  --card: #0a0f0d;
   --foreground: #ffffff;
   --muted: #9ca3af;
   --border: #166534;
@@ -24,6 +26,7 @@
 
 @theme inline {
   --color-background: var(--background);
+  --color-card: var(--card);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-border: var(--border);
@@ -44,7 +47,7 @@ body {
 }
 
 .card-surface {
-  @apply rounded-lg border-2 border-border bg-background;
+  @apply rounded-lg border-2 border-border bg-card text-foreground shadow-sm;
 }
 
 .section-divider {
@@ -52,16 +55,15 @@ body {
 }
 
 .tag-border {
-  @apply rounded-md border-2 border-border bg-accent/70;
+  @apply rounded-md border-2 border-border bg-accent text-foreground;
 }
 
-/* Equal-height grids: stretch every card in a row to the tallest sibling */
 .card-grid {
   @apply grid items-stretch gap-4 sm:gap-5;
 }
 
 .uniform-card {
-  @apply flex h-full flex-col rounded-lg border-2 border-border bg-background p-5 sm:p-6;
+  @apply flex h-full flex-col rounded-lg border-2 border-border bg-card p-5 text-foreground shadow-sm sm:p-6;
 }
 
 .uniform-card-body {
@@ -81,5 +83,18 @@ body {
 }
 
 .contact-card {
-  @apply flex h-full min-h-[7.5rem] flex-col justify-center rounded-lg border-2 border-border bg-background p-5 sm:p-6;
+  @apply flex h-full min-h-[7.5rem] flex-col justify-center rounded-lg border-2 border-border bg-card p-5 text-foreground shadow-sm sm:p-6;
+}
+
+/* Hero snapshot: always dark panel (sits inside dark hero banner) */
+.hero-snapshot {
+  @apply flex h-full flex-col justify-between gap-4 rounded-lg border-2 border-emerald-500/60 bg-emerald-950/80 p-4 text-white sm:p-5 sm:text-sm;
+}
+
+.hero-snapshot-muted {
+  @apply text-emerald-100/80;
+}
+
+.hero-snapshot-tag {
+  @apply rounded-md border-2 border-emerald-500/50 bg-emerald-900/50 px-2 py-0.5 text-emerald-50 sm:px-3 sm:py-1;
 }
