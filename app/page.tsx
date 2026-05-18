@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { ArrowRight, ExternalLink, Github, Download } from "lucide-react";
+import { ArrowRight, ExternalLink, Github, Download, Send } from "lucide-react";
 
 type Category = "All" | "Web" | "Backend" | "UI";
 
