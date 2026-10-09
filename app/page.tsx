@@ -5,53 +5,59 @@ import Image from "next/image";
 import { useState } from "react";
 import { ArrowRight, ExternalLink, Github, Download, Send } from "lucide-react";
 
-type Category = "All" | "Web" | "Backend" | "UI";
+type Category = "All" | "AI Systems" | "Full-Stack" | "Backend";
 
 const FEATURED_PROJECTS = [
   {
-    title: "Expense Tracker (Cashually)",
+    title: "Clarity — Multi-Doc RAG + LangGraph Agent",
     description:
-      "Full-stack expense tracking app with JWT auth, 10 REST endpoints, and PostgreSQL schema—deployed live at Cashually.vercel.app.",
-    tech: ["FastAPI", "Next.js", "PostgreSQL", "JWT"],
-    category: "Web" as Category,
-    href: "https://cashually.vercel.app",
+      "Production RAG pipeline supporting multi-doc ingestion (PDF, DOCX, TXT, MD) with Gemini embeddings & ChromaDB. Features LangGraph ReAct agent with autonomous tool orchestration, session memory, SSE streaming, and RAG evaluation pipeline.",
+    tech: ["FastAPI", "LangGraph", "ChromaDB", "Gemini", "Next.js", "Docker"],
+    category: "AI Systems" as Category,
+    href: "https://clarrity.vercel.app/",
   },
   {
-    title: "Smart Medical Box",
+    title: "Expense Tracker (Cashually + AI Chatbot)",
     description:
-      "IoT medicine dispenser with YOLOv5 pill detection (~85% accuracy), scheduled dispensing, and a Flask dashboard for logs and camera feed.",
-    tech: ["Python", "Flask", "Raspberry Pi", "YOLOv5"],
-    category: "Backend" as Category,
+      "Full-stack financial application using FastAPI, Next.js, and PostgreSQL. Integrated an LLM-powered AI chatbot allowing users to query financial data via natural language, with 10+ REST APIs (<150ms) and JWT auth.",
+    tech: ["FastAPI", "Next.js", "PostgreSQL", "JWT", "LLMs"],
+    category: "Full-Stack" as Category,
+    href: "https://cashually.vercel.app/",
   },
   {
-    title: "Customer Segmentation",
+    title: "AI Based Interview Assistant",
     description:
-      "Performed customer segmentation using RFM analysis and K-Means clustering algorithms to improve targeting accuracy.",
-    tech: ["Python", "Scikit-learn", "NumPy", "Pandas"],
-    category: "Backend" as Category,
+      "Automated evaluation engine using fine-tuned Hugging Face transformers (DistilBERT) and vector-based semantic search, processing inputs in <3s with 80% sentiment alignment and visual heatmaps.",
+    tech: ["Python", "Hugging Face", "DistilBERT", "Tkinter", "Google Speech API"],
+    category: "AI Systems" as Category,
   },
   {
-    title: "AI Interview Assistant",
+    title: "Mabani (PropTech on Play Store)",
     description:
-      "Analyzes interview responses with DistilBERT sentiment scoring, fluency metrics, and visual summary reports in under 3 seconds.",
-    tech: ["Python", "Hugging Face", "Google Speech API", "Tkinter"],
-    category: "Backend" as Category,
+      "Engineered full-stack features for live PropTech app, integrated 20+ REST APIs feeding real-time user data into backend AI automation workflows, and architected Firebase real-time sync listeners.",
+    tech: ["React", "Next.js", "Firebase", "REST APIs", "AI Workflows"],
+    category: "Full-Stack" as Category,
   },
 ];
 
 const SKILLS = [
   "Python",
-  "JavaScript",
-  "Next.js",
-  "React",
+  "LangGraph",
+  "LangChain",
   "FastAPI",
-  "Flask",
+  "Next.js",
+  "TypeScript",
   "PostgreSQL",
+  "ChromaDB",
+  "Docker",
+  "PyTorch",
+  "Hugging Face",
+  "LLMs",
+  "RAG Pipelines",
   "Firebase",
   "REST APIs",
-  "Postman",
-  "Figma",
-  "PyTorch",
+  "SQL",
+  "Git",
 ];
 
 const EXPERIENCE = [
@@ -60,14 +66,14 @@ const EXPERIENCE = [
     title: "Software Developer",
     company: "Trynocode",
     summary:
-      "Delivered 5+ UI modules across real estate and service-management apps; converted 50+ Figma designs to React/Next.js and integrated 20+ REST APIs with Firebase auth and real-time features.",
+      "Engineered full-stack features for Mabani (live PropTech app on Play Store), integrated 20+ REST APIs into backend AI automation workflows, architected Firebase real-time sync listeners, implemented test suites reducing production bugs by ~25%, and engineered MVP core features for an AI notetaker app listed on Amazon.",
   },
   {
     period: "Jun 2024 — Aug 2024",
     title: "Summer Intern (Remote)",
     company: "Whizkey",
     summary:
-      "Built a lead database of 250+ potential clients and wrote 5 SEO-optimized articles, increasing estimated organic traffic by ~20% over two months.",
+      "Built lead database of 250+ clients and wrote SEO-optimized content, increasing organic traffic by ~20% over 2 months.",
   },
 ];
 
@@ -106,15 +112,15 @@ export default function Home() {
             <div className="relative grid gap-8 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:items-stretch">
               <div className="space-y-6">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/70 sm:text-xs">
-                  Computer Science Student @ BITS Pilani
+                  Applied AI Engineer • Full-Stack & ML Systems • BITS Pilani (2022–2026)
                 </p>
                 <h1 className="text-3xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
-                  Reliable <span className="text-emerald-300">web & backend systems.</span>
+                  Applied AI & <span className="text-emerald-300">Scalable Systems.</span>
                 </h1>
                 <p className="max-w-3xl text-xs leading-relaxed text-white/80 sm:text-sm md:text-base">
-                  I&apos;m Koteswara Rao Perumalla. I build production-grade products—from
-                  responsive React/Next.js interfaces to robust Python backends—focusing
-                  on performance and simple abstractions.
+                  I&apos;m Koteswara Rao Perumalla. I build production AI pipelines—from
+                  multi-document RAG and autonomous LangGraph agents to high-performance
+                  FastAPI backends and full-stack web applications.
                 </p>
                 <div className="grid grid-cols-1 gap-2 xs:grid-cols-2 sm:flex sm:flex-wrap sm:gap-3">
                   <Link
@@ -141,7 +147,7 @@ export default function Home() {
                   </a>
                   <a
                     href="/Koteswara - Resume.pdf"
-                    download
+                    download="Koteswara_Rao_Perumalla_Resume.pdf"
                     className="flex w-full items-center justify-center gap-2 rounded-md border border-emerald-400/60 bg-emerald-500/20 px-4 py-3 text-xs font-medium text-white transition-colors hover:bg-emerald-500/30 sm:w-auto sm:px-6 sm:py-3 sm:text-sm"
                   >
                     <Download className="h-4 w-4" />
@@ -177,17 +183,17 @@ export default function Home() {
                   </span>
                   <span className="flex items-center gap-2 rounded-md border-2 border-emerald-400/70 bg-emerald-800/50 px-2 py-0.5 text-[10px] text-emerald-100 sm:px-3 sm:py-1 sm:text-xs">
                     <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
-                    Available for work
+                    Open to Relocation
                   </span>
                 </div>
                 <div className="space-y-3">
                   <p className="leading-relaxed text-emerald-50">
-                    I work best at the intersection of performance and design,
-                    building stable systems that solve real problems with
-                    minimal noise.
+                    Focused on multi-document RAG, agentic ReAct workflows,
+                    real-time streaming, and reliable backend engineering with
+                    FastAPI, Next.js, and Docker.
                   </p>
                   <div className="flex flex-wrap gap-2 text-[10px] sm:text-xs">
-                    {["Python", "React", "FastAPI", "Next.js"].map((item) => (
+                    {["FastAPI", "LangGraph", "RAG", "Next.js", "Docker", "PostgreSQL"].map((item) => (
                       <span
                         key={item}
                         className="hero-snapshot-tag"
@@ -210,12 +216,12 @@ export default function Home() {
               Featured projects
             </h2>
             <p className="max-w-4xl text-xs leading-relaxed text-muted sm:text-sm md:text-base">
-              A few technical projects that highlight how I think about system design,
-              performance, and user experience.
+              Production systems highlighting multi-document RAG, agentic tool orchestration,
+              full-stack architectures, and AI evaluation pipelines.
             </p>
           </div>
           <div className="flex flex-wrap gap-1.5 text-[10px] sm:gap-2 sm:text-xs">
-            {["All", "Web", "Backend", "UI"].map((category) => (
+            {["All", "AI Systems", "Full-Stack", "Backend"].map((category) => (
               <button
                 key={category}
                 type="button"
@@ -283,11 +289,10 @@ export default function Home() {
             About
           </h2>
           <p className="max-w-4xl text-xs leading-relaxed text-muted sm:text-sm md:text-base">
-            I&apos;m a Computer Science student at BITS Pilani Dubai with a
-            passion for building resilient systems and thoughtful interfaces.
-            I have experience in full-stack development, from React/Next.js
-            frontends to Python/FastAPI backends, and I enjoy solving complex
-            problems with clean code.
+            I&apos;m an Applied AI and Backend Engineer studying Computer Science at
+            BITS Pilani Dubai Campus (B.E., Sep 2022 – Sep 2026), open to relocation.
+            I specialize in end-to-end AI system development, multi-document RAG pipelines,
+            agentic workflows (LangGraph ReAct), and high-reliability FastAPI &amp; Next.js architectures.
           </p>
 
           <div className="card-grid mt-6 text-xs sm:grid-cols-2 sm:text-sm">

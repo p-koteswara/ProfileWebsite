@@ -40,7 +40,7 @@ export default function RootLayout({
             <header className="sticky top-0 z-50 border-b-2 border-emerald-900 bg-header-bg/95 text-header-text backdrop-blur-sm dark:border-emerald-700">
               <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
                 <Link href="/" className="text-base font-semibold tracking-tight shrink-0">
-                  Koteswara Perumalla
+                  Koteswara Rao Perumalla
                 </Link>
 
                 <nav className="flex items-center gap-3 sm:gap-6">
@@ -54,6 +54,13 @@ export default function RootLayout({
                         {item.name}
                       </Link>
                     ))}
+                    <a
+                      href="/Koteswara - Resume.pdf"
+                      download="Koteswara_Rao_Perumalla_Resume.pdf"
+                      className="rounded-md border border-white/20 bg-white/5 px-3 py-1.5 text-xs font-medium text-header-text transition-colors hover:bg-white/15"
+                    >
+                      Resume
+                    </a>
                   </div>
 
                   <div className="flex items-center gap-2 sm:gap-4">
@@ -82,6 +89,14 @@ export default function RootLayout({
                       {item.name}
                     </Link>
                   ))}
+                  <a
+                    href="/Koteswara - Resume.pdf"
+                    download="Koteswara_Rao_Perumalla_Resume.pdf"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block py-3 text-sm font-medium text-emerald-300 transition-colors hover:text-white"
+                  >
+                    Download Resume (PDF)
+                  </a>
                 </nav>
               )}
             </header>
@@ -103,7 +118,7 @@ export default function RootLayout({
                     <Github className="h-5 w-5" />
                   </a>
                   <a
-                    href="https://linkedin.com/in/perumallakoteswara"
+                    href="https://www.linkedin.com/in/perumallakoteswara/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-foreground/70 transition-colors hover:text-foreground dark:text-muted"

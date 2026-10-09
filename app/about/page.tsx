@@ -6,6 +6,7 @@ import {
   Database,
   Layout,
   Sparkles,
+  Download,
 } from "lucide-react";
 
 export default function About() {
@@ -15,73 +16,108 @@ export default function About() {
       role: "Software Developer",
       period: "Jul 2025 — Jan 2026",
       description:
-        "Delivered 5+ UI modules across 2 client-facing applications (real estate and service management). Converted 50+ Figma designs into production-ready components, integrated 20+ REST APIs via Postman, and implemented Firebase auth, real-time updates, and data storage. Built responsive landing pages with 90+ Lighthouse scores and co-developed 10+ reusable React/Next.js components for faster MVP delivery.",
-      tech: ["Next.js", "React", "Firebase", "REST APIs", "Postman", "Figma"],
+        "Engineered full-stack features for Mabani (live PropTech app on Play Store), integrated 20+ REST APIs to feed real-time user data into backend AI automation workflows. Architected Firebase real-time sync listeners to handle event-driven triggers, cutting response latencies for active users. Implemented unit and API integration test suites, reducing system production bugs by ~25% ensuring high reliability. Contributed to development of an AI-powered notetaker app now listed on Amazon, engineering core features during early-stage product MVP builds.",
+      tech: [
+        "FastAPI",
+        "Next.js",
+        "React",
+        "Firebase",
+        "REST APIs",
+        "AI Workflows",
+        "Play Store",
+        "Unit & API Testing",
+      ],
     },
     {
       company: "Whizkey",
       role: "Summer Intern (Remote)",
       period: "Jun 2024 — Aug 2024",
       description:
-        "Built a lead database of 250+ potential clients and wrote 5 SEO-optimized articles, increasing organic traffic by an estimated 20% over 2 months.",
-      tech: ["Lead Generation", "SEO", "Technical Writing"],
+        "Built lead database of 250+ clients; wrote SEO-optimized content increasing organic traffic by ~20% over 2 months.",
+      tech: ["Lead Generation", "SEO Content", "Database Management", "Content Optimization"],
     },
   ];
 
   const education = [
     {
-      school: "Bits Pilani Dubai Campus",
-      degree: "B.E. Computer Science",
-      period: "2022 — 2026",
-      details: "CGPA: 8.0",
-      location: "Dubai",
-    },
-    {
-      school: "Bright Riders School",
-      degree: "Grade 4 — Grade 12",
-      period: "2014 — 2022",
-      location: "Abu Dhabi",
+      school: "Bits Pilani, Dubai Campus",
+      degree: "B.E, Computer Science",
+      period: "Sep 2022 — Sep 2026",
+      details: "India (Open to Relocation)",
+      location: "Dubai Campus",
     },
   ];
 
   const skillCategories = [
     {
-      name: "Languages",
+      name: "Languages & Frameworks",
       icon: <Code2 className="h-4 w-4" />,
-      skills: ["Python", "Java", "C", "C++", "JavaScript", "SQL", "HTML", "CSS"],
-    },
-    {
-      name: "Frameworks & Tech",
-      icon: <Layout className="h-4 w-4" />,
-      skills: ["Next.js", "FastAPI", "Flask", "PyTorch", "RAG"],
-    },
-    {
-      name: "Tools & Databases",
-      icon: <Database className="h-4 w-4" />,
       skills: [
-        "MySQL",
-        "SQLite",
-        "PostgreSQL",
-        "Firebase",
-        "ChromaDB",
-        "Postman",
-        "Figma",
-        "Git",
-        "GitHub",
+        "Python",
+        "SQL",
+        "Java",
+        "C++",
+        "TypeScript",
+        "JavaScript",
+        "FastAPI",
+        "Flask",
+        "REST APIs",
+        "LangChain",
+        "LangGraph",
       ],
     },
     {
-      name: "Libraries & Concepts",
+      name: "AI/ML & Gen AI",
       icon: <Cpu className="h-4 w-4" />,
       skills: [
-        "Scikit-learn",
+        "PyTorch",
+        "TensorFlow",
+        "Scikit-Learn",
+        "Hugging Face (Transformers)",
+        "LLMs",
+        "RAG Pipelines",
+        "ReAct Agent Pattern",
+        "Tool Orchestration",
+        "LoRA / PEFT",
+        "Prompt Engineering",
+        "Semantic Search",
+        "OpenRouter",
+        "Model Evaluation",
+        "YOLOv5",
+        "OpenCV",
+        "Sentiment Analysis",
+      ],
+    },
+    {
+      name: "Data, DBs & Infra",
+      icon: <Database className="h-4 w-4" />,
+      skills: [
+        "PostgreSQL",
+        "ChromaDB (Vector DB)",
+        "Supabase",
+        "Firebase",
+        "Vector Search",
+        "Pandas",
         "NumPy",
-        "SciPy",
-        "Matplotlib",
-        "REST APIs",
-        "System Design",
-        "DSA",
-        "OOP",
+        "ETL Pipelines",
+        "Docker",
+        "Docker Compose",
+        "Git",
+        "CI/CD (basics)",
+      ],
+    },
+    {
+      name: "Core Competencies",
+      icon: <Sparkles className="h-4 w-4" />,
+      skills: [
+        "End-to-End AI System Development",
+        "Multi-Document RAG",
+        "Agentic AI Workflows",
+        "API Integration",
+        "Data-Driven Decision Making",
+        "Model Monitoring",
+        "A/B Testing (basics)",
+        "Experiment Tracking",
       ],
     },
   ];
@@ -89,21 +125,36 @@ export default function About() {
   return (
     <div className="space-y-16 pb-20">
       <section className="card-surface space-y-6 p-6 pt-6 sm:p-8 sm:pt-14">
-        <h1 className="text-3xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
-          Building with <span className="text-emerald-700 dark:text-emerald-500">purpose.</span>
-        </h1>
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+          <div className="space-y-2">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-emerald-700 dark:text-emerald-400 sm:text-xs">
+              Applied AI Engineer • Backend &amp; Full-Stack Systems
+            </p>
+            <h1 className="text-3xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
+              Building with <span className="text-emerald-700 dark:text-emerald-500">purpose &amp; precision.</span>
+            </h1>
+          </div>
+          <a
+            href="/Koteswara - Resume.pdf"
+            download="Koteswara_Rao_Perumalla_Resume.pdf"
+            className="inline-flex shrink-0 items-center gap-2 rounded-md border border-emerald-500/40 bg-emerald-500/10 px-4 py-2.5 text-xs font-medium text-emerald-900 transition-colors hover:bg-emerald-500/20 dark:text-emerald-200 sm:text-sm"
+          >
+            <Download className="h-4 w-4" />
+            Download Resume
+          </a>
+        </div>
         <div className="max-w-3xl space-y-4">
           <p className="text-sm leading-relaxed text-muted sm:text-lg">
-            I&apos;m Koteswara Rao Perumalla, a Computer Science student at BITS
-            Pilani Dubai. I specialize in bridging the gap between design and
-            functionality, creating seamless digital experiences that are both
-            robust and intuitive.
+            I&apos;m Koteswara Rao Perumalla, an Applied AI Engineer and Backend Engineer
+            studying Computer Science at BITS Pilani Dubai Campus (Sep 2022 – Sep 2026),
+            open to relocation. I design and engineer scalable AI workflows, production RAG pipelines,
+            and robust full-stack software architectures.
           </p>
           <p className="text-sm leading-relaxed text-muted sm:text-lg">
-            My approach is rooted in simplicity and performance. Whether I&apos;m
-            architecting a backend with FastAPI or crafting a frontend with
-            Next.js, I focus on delivering clean, maintainable code that solves
-            real-world problems.
+            My engineering work bridges the gap between state-of-the-art AI systems and real-world software
+            reliability. Whether architecting autonomous ReAct agents with LangGraph, building streaming SSE
+            endpoints for real-time interactions, or structuring transactional PostgreSQL layers with FastAPI,
+            I focus on performance, clean abstractions, and measurable impact.
           </p>
         </div>
       </section>
@@ -171,7 +222,7 @@ export default function About() {
               <div className="uniform-card-body flex-1">
                 <div className="flex flex-wrap content-start gap-2">
                   {category.skills.map((skill) => (
-                    <span key={skill} className="text-sm text-muted">
+                    <span key={skill} className="text-xs text-muted">
                       {skill}
                     </span>
                   ))}
@@ -190,14 +241,14 @@ export default function About() {
               Education
             </h2>
           </div>
-          <div className="card-grid sm:grid-cols-2">
+          <div className="card-grid sm:grid-cols-1">
             {education.map((edu) => (
               <div key={edu.school} className="uniform-card justify-start gap-2">
                 <div className="flex items-start justify-between gap-2">
                   <h3 className="font-medium text-foreground">{edu.school}</h3>
                   <span className="shrink-0 text-xs text-muted">{edu.period}</span>
                 </div>
-                <p className="text-sm text-emerald-700 dark:text-emerald-500">{edu.degree}</p>
+                <p className="text-sm font-medium text-emerald-700 dark:text-emerald-500">{edu.degree}</p>
                 {edu.details && (
                   <p className="text-sm text-muted">{edu.details}</p>
                 )}
@@ -211,30 +262,31 @@ export default function About() {
           <div className="section-divider flex items-center gap-2">
             <Layout className="h-5 w-5 text-emerald-700 dark:text-emerald-500" />
             <h2 className="text-xl font-semibold tracking-tight sm:text-2xl">
-              Beyond Code
+              Core Competencies &amp; Practices
             </h2>
           </div>
           <div className="space-y-4">
             <p className="text-sm leading-relaxed text-muted">
-              Outside of technical development, I am deeply interested in system
-              design principles and optimizing development workflows. I enjoy
-              participating in hackathons and exploring the intersection of AI
-              and human productivity.
+              Passionate about building production-ready AI systems from the ground up:
+              crafting evaluation frameworks (faithfulness, relevance, completeness),
+              streamlining data pipelines, and architecting fault-tolerant microservices.
             </p>
             <div className="uniform-card mt-auto flex-1 bg-emerald-100 dark:bg-emerald-500/5">
               <h4 className="mb-2 text-sm font-medium text-emerald-800 dark:text-emerald-500">
-                Soft Skills
+                Key Strengths
               </h4>
               <div className="flex flex-wrap gap-3 text-xs text-muted">
-                <span>Communication</span>
+                <span>Multi-Doc RAG Architectures</span>
                 <span>•</span>
-                <span>Creativity</span>
+                <span>Autonomous Agentic Workflows</span>
                 <span>•</span>
-                <span>Problem Solving</span>
+                <span>API Integration &amp; Testing</span>
                 <span>•</span>
-                <span>Quick Learner</span>
+                <span>Data-Driven Decision Making</span>
                 <span>•</span>
-                <span>Adaptable</span>
+                <span>Model Monitoring &amp; Evaluation</span>
+                <span>•</span>
+                <span>Docker &amp; Containerization</span>
               </div>
             </div>
           </div>
